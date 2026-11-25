@@ -34,6 +34,7 @@ jobs:
       IDEA_TEST_DB_USER: ci_user
       IDEA_TEST_DB_PASSWORD: ci_password
 
+
     steps:
       - name: Check out the code
         uses: actions/checkout@v4
