@@ -10,7 +10,6 @@ import com.ideasupport.lib.common.objects.Profiles
 
 @Component
 class Logger(
-	private val slackWebhook: SlackWebhook,
 	@Autowired private val etc: Etc,
 ) {
 	private val logger: KLogger = KotlinLogging.logger {}
@@ -99,7 +98,6 @@ class Logger(
 			),
 		) {
 			logger.warn { loggerInputDto.message + " 🟡" }
-			if (etc.getActiveProfile() != Profiles.PROD && etc.getActiveProfile() != Profiles.TEST) slackWebhook.warn(loggerInputDto)
 		}
 	}
 
@@ -125,7 +123,6 @@ class Logger(
 			),
 		) {
 			logger.error { loggerInputDto.message + " ❌" }
-			if (etc.getActiveProfile() != Profiles.TEST) slackWebhook.error(loggerInputDto)
 		}
 	}
 }
