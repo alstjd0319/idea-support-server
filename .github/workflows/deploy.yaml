@@ -30,7 +30,7 @@ jobs:
           - 3306:3306
 
     env:
-      IDEA_TEST_JDBC_URL: jdbc:mysql://127.0.0.1:3306/idea_support_test5?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
+      IDEA_TEST_JDBC_URL: jdbc:mysql://127.0.0.1:3306/idea_support_test?connectionTimeZone=UTC&forceConnectionTimeZoneToSession=true
       IDEA_TEST_DB_USER: ci_user
       IDEA_TEST_DB_PASSWORD: ci_password
 

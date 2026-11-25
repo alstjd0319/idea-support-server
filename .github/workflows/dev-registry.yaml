@@ -101,3 +101,4 @@ jobs:
           curl --silent --show-error --fail "https://daelim.minq.live/$prefix/common/health" | jq -e '.status == "ok" and .database == "up"'
           printf '\n### Lightsail deployment\n\nHealth: https://daelim.minq.live/%s/common/health\n\n' "$prefix" >> "$GITHUB_STEP_SUMMARY"
           jq -r '"Result: " + .status + "\n\nDigest: `" + .image + "`"' deployment-result.json >> "$GITHUB_STEP_SUMMARY"
+
