@@ -6,7 +6,6 @@ import mu.withLoggingContext
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import com.ideasupport.lib.common.dto.LoggerInputDto
-import com.ideasupport.lib.common.objects.Profiles
 
 @Component
 class Logger(
