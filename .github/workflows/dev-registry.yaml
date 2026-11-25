@@ -82,6 +82,7 @@ jobs:
         run: |
           printf '### Dev image\n\nLatest: `%s/%s/idea-support-server:latest`\n\nCommit: `%s`\n' "$REGISTRY_HOST" "$REGISTRY_NAMESPACE" "$CONTAINER_IMAGE" >> "$GITHUB_STEP_SUMMARY"
       - name: Deploy team app and check health
+
         env:
           DEPLOY_URL: ${{ vars.DEV_DEPLOY_URL }}
           DEPLOY_TOKEN: ${{ secrets.DEV_DEPLOY_TOKEN }}
